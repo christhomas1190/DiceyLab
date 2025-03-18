@@ -9,7 +9,7 @@ public class DiceTest {
         //When
         int toss = dice.rollAdd();
         //Then
-        Assert.assertTrue("Toss should be between2-12", toss >= 2 && toss <= 12);
+        Assert.assertTrue("Toss should be between 2-12", toss >= 2 && toss <= 12);
     }@Test
        public void diceTest2() {
         //Given
