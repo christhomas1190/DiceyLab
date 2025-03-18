@@ -18,7 +18,7 @@ public class Bins {
         return binCount.getOrDefault(value, 0);
     }
 
-
+//does this count as a file change?
     public void Histogram() {
         for (int i = 2; i <= 12; i++) {
             int count =binCount.get(i);
