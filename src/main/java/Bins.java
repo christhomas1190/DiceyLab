@@ -21,7 +21,7 @@ public class Bins {
 
     public void Histogram() {
         for (int i = 2; i <= 12; i++) {
-            System.out.printf("%2d: %s (%d)\n", i, "*".repeat(binCount.get(i) / 1000), binCount.get(i));
+            System.out.printf("%2d: %s (%d)\n", i, "*".repeat(binCount.get(i) / 10000), binCount.get(i));
 
         }
     }
