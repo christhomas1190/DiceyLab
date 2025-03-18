@@ -34,4 +34,10 @@ public class DiceTest {
                 assertEquals(0, bins.getBin(i), "Bin " + i + " should start at 0.");
         }
     }
+    @Test
+    public void testHistogram(){
+        Bins bins = new Bins(2,12);
+        bins.increment(70);
+        bins.Histogram();
+    }
 }
