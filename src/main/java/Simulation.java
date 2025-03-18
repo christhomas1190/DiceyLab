@@ -4,9 +4,9 @@ public class Simulation {
     private final int numberOfRolls;
 
 
-    public Simulation(int numberOfDice, Dice dice, int numberOfRolls1) {
-        this.dice = dice;
-
+    public Simulation(int numberOfDice, int numberOfRolls1) {
+        this.bins=new Bins(2, numberOfDice*6);
+        this.dice=new Dice(numberOfDice);
         this.numberOfRolls = numberOfRolls1;
     }
     public void runSimulation() {
@@ -22,11 +22,7 @@ public class Simulation {
         bins.Histogram();
     }
 
-    public static void main(String[] args) {
-        Simulation sim = new Simulation(2, 100); // Rolling 1,000,000 times
-        sim.runSimulation();
-        sim.printResults();
-    }
+
 }
 
 

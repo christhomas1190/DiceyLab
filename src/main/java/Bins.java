@@ -12,7 +12,7 @@ public class Bins {
         }
     }
     public void increment( int val){
-        binCount.put(val,binCount.getOrDefault(val,0+1));
+        binCount.put(val,binCount.getOrDefault(val,0)+1);
     }
     public int getBin(int value) {
         return binCount.getOrDefault(value, 0);
@@ -21,7 +21,9 @@ public class Bins {
 
     public void Histogram() {
         for (int i = 2; i <= 12; i++) {
-            System.out.printf("%2d: %s (%d)\n", i, "*".repeat(binCount.get(i) / 10000), binCount.get(i));
+            int count =binCount.get(i);
+            String stars= "*".repeat(count/1000);
+            System.out.printf("%2d: %s (%d)\n", i, stars, count);
 
         }
     }
